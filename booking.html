@@ -1,0 +1,68 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service - Naly Cleaning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Naly Cleaning</div>
+      <div>
+        <img src="Images/Naly.jpg" alt="Naly Cleaning team at work" width="50" height="50" />
+      </div>
+       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="booking">
+    <h1>Book a Cleaning Service</h1>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="service">Select Service:</label>
+      <select id="service" name="service">
+        <option>Laundry</option>
+        <option>Home Cleaning</option>
+        <option>Office Cleaning</option>
+        <option>Carpet & Upholstery</option>
+      </select>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+   <footer>
+    <p>&copy; 2025 Naly Cleaning Services | Nairobi, Kenya</p>
+    <p>Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">X (Twitter)</a>
+  </p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
