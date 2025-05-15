@@ -124,56 +124,59 @@ body {
   }
 }
 
+/* ABOUT SECTION */
 
 .about {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #004d40;
+  position: relative;
+  color: #fff;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color:#00796b;
+  z-index: 0;
 }
 
 .about h2 {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #00796b;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  z-index: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 20px;
+  padding: 2rem 1rem;
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  gap: 40px;
+  align-items: flex-start;
 }
 
-/* Each about-row is a flex container */
 .about-row {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  width: 100%;
+  gap: 40px;
+  align-items: flex-start;
 }
 
-/* Reverse flex direction for rows with reverse class */
-.about-row.reverse {
-  flex-direction: row-reverse;
-}
-
-/* About text takes available space, with margin */
-.about-text {
-  flex: 1;
-  margin: 20px;
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #004d40dd;
-}
-
-/* Image styling */
 .about-image {
-  flex: 0 0 150px; /* fixed width for images */
-  margin: 20px;
+  flex: 0 0 600px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .about-image img {
@@ -181,25 +184,33 @@ body {
   height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 12px;
 }
 
-/* Hover zoom effect */
-.about-image:hover {
-  transform: scale(1.05);
+.about-text {
+  flex: 1;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0f2f1; /* light mint */
 }
 
-/* Responsive layout */
-@media (max-width: 768px) {
-  .about-row,
-  .about-row.reverse {
+.about-text p {
+  margin-bottom: 1.2em;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .about-row {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
-
-  .about-image img {
-    width: 80%;
-    margin: 0 auto;
+  .about-image {
+    margin-bottom: 15px;
+  }
+  .about-text {
+    margin: 0;
+    text-align: center;
   }
 }
 
